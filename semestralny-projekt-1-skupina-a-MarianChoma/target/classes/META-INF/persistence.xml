@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="vsa-project-a" transaction-type="RESOURCE_LOCAL">
+            <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+            <class>sk.stuba.fei.uim.vsa.pr1a.Car</class>
+            <class>sk.stuba.fei.uim.vsa.pr1a.Customer</class>
+            <class>sk.stuba.fei.uim.vsa.pr1a.ParkingHouse</class>
+            <class>sk.stuba.fei.uim.vsa.pr1a.Floor</class>
+            <class>sk.stuba.fei.uim.vsa.pr1a.ParkingPlace</class>
+            <class>sk.stuba.fei.uim.vsa.pr1a.Reservation</class>
+            <class>sk.stuba.fei.uim.vsa.pr1a.Coupon</class>
+            <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+            <properties>
+                <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+                <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/VSA_PR1"/>
+                <property name="javax.persistence.jdbc.user" value="vsa"/>
+                <property name="javax.persistence.jdbc.password" value="vsa"/>
+                <property name="javax.persistence.schema-generation.database.action" value="create"/>
+                <property name="eclipselink.target-database" value="MySQL"/>
+            </properties>
+
+    </persistence-unit>
+</persistence>
